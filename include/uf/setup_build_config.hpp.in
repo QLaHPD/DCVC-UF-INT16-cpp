@@ -1,0 +1,14 @@
+#pragma once
+
+#include <string_view>
+
+namespace uf::setup_build {
+
+inline constexpr std::string_view source_root = "@UF_SETUP_SOURCE_ROOT_ESCAPED@";
+inline constexpr std::string_view cutlass_root = "@UF_SETUP_CUTLASS_ROOT_ESCAPED@";
+inline constexpr std::string_view compiler = "@UF_SETUP_COMPILER_ESCAPED@";
+inline constexpr std::string_view torch_package_version = "@UF_TORCH_PACKAGE_VERSION_ESCAPED@";
+inline constexpr std::string_view torch_cuda_version = "@UF_TORCH_CUDA_VERSION_ESCAPED@";
+inline constexpr bool torch_cuda_version_known = @UF_TORCH_CUDA_VERSION_KNOWN@;
+
+}  // namespace uf::setup_build

@@ -1,0 +1,34 @@
+{
+  "audited_on": "2026-10-07",
+  "release_scope": "Experimental UF C++ application; runtime verification covers HT-L INT16 on SM87",
+  "models_or_checkpoints_loaded": true,
+  "verified": {
+    "selected_uf_build": true,
+    "ctest_entries": 10,
+    "htl_int16_cpu_cuda_state_parity": true,
+    "cpp_to_python_archive_decode": true,
+    "python_to_cpp_archive_decode": true,
+    "identical_encoded_video_and_decoded_yuv": true,
+    "real_channel_new_archives": 29,
+    "real_channel_decoded_frames": 24637,
+    "originals_preserved": true,
+    "tested_source_manifest_sha256": "90eae923717a022d1573ca4caa60500670b32342aacf1f0c5928f975ac76f257",
+    "clean_checkout_executable_sha256": "6ceeb76dc2246a603c25c812b56b9ddcf49b4e2f3cfd8679495d1f812f144f47"
+  },
+  "publication": {
+    "clean_checkout_build": "passed",
+    "ctest": "10/10 passed; 150 native checks",
+    "portable_cross_language_harness": "passed including state/CPU/CUDA parity",
+    "public_source_audit": "passed",
+    "delivery_authority": "GitHub main ref; confirm commit SHA after push"
+  },
+  "remaining_validation": [
+    "Full FP16 learned-model codec parity",
+    "HT-S/LD model parity",
+    "Complete learned-model training/evaluation/persistence",
+    "Live graphical viewer behavior",
+    "Destructive decoder-backed cleanup",
+    "NCCL and LittleCMS2 unavailable"
+  ],
+  "limits": "Named tests prove their cases; universal input/race/parity claims are not made. No model-loading restriction remains."
+}

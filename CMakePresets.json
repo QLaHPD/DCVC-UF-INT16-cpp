@@ -1,0 +1,29 @@
+{
+  "version": 2,
+  "cmakeMinimumRequired": {"major": 3, "minor": 20, "patch": 0},
+  "configurePresets": [
+    {
+      "name": "uf",
+      "displayName": "UF application",
+      "generator": "Unix Makefiles",
+      "binaryDir": "${sourceDir}/build/uf",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "UF_BUILD_DCVC2021": "OFF",
+        "UF_BUILD_DCVC_TCM": "OFF",
+        "UF_BUILD_DCVC_HEM": "OFF",
+        "UF_BUILD_DCVC_DC": "OFF",
+        "UF_BUILD_FP16": "ON",
+        "UF_BUILD_TRAINING": "ON",
+        "UF_BUILD_TRAINING_NCCL": "OFF",
+        "UF_BUILD_EVALUATION": "ON",
+        "UF_BUILD_RD_PLOTS": "ON",
+        "UF_BUILD_NATIVE_IMAGES": "ON",
+        "UF_BUILD_VIEWER": "ON"
+      }
+    }
+  ],
+  "buildPresets": [
+    {"name": "uf", "configurePreset": "uf", "jobs": 1}
+  ]
+}
